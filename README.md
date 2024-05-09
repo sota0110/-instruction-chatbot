@@ -152,9 +152,9 @@
 1. OpenAIのAPIキーをコピーし、`OPENAI_APIKEY`の`xxx`の部分に貼り付け
 1. LINE Developersにログイン
 1. LINE DevelopersのMessaging APIにあるチャンネルアクセストークンをコピーし、`LINE_ACCESS_TOKEN`の`xxx`の部分に貼り付け
-1. stripeの公開可能キーをコピーし、`STRIPE_APIKEY`の`xxx`の部分に貼り付け
+1. stripeの公開可能キーをコピーし、`STRIPE_APIKEY`の`xxx`の部分に貼り付け  
   `https://dashboard.stripe.com`
-1. stripe payment linksをコピーし、`PAYMENT_LINKS`の`xxx`の部分に貼り付け
+1. stripe payment linksをコピーし、`PAYMENT_LINKS`の`xxx`の部分に貼り付け  
   `https://dashboard.stripe.com/products`
 1. google apps scriptの右上にあるデプロイボタンから新しいデプロイをクリック
 1. 左上の設定アイコンからウェブアプリを選択
@@ -255,13 +255,13 @@
     const SHEET_ID = "xxx";
     const SUBSCRIBE_LOG_SHEET = SpreadsheetApp.openById(SHEET_ID).getSheetByName("payment");
     ```
-1. stripeのシークレットキーをコピーし、`STRIPE_SECRET`の`xxx`の部分に貼り付け
+1. stripeのシークレットキーをコピーし、`STRIPE_SECRET`の`xxx`の部分に貼り付け  
   `https://dashboard.stripe.com`
-1. stripeのポータルURLをコピーし、`PORTAL`の`xxx`の部分に貼り付け
+1. stripeのポータルURLをコピーし、`PORTAL`の`xxx`の部分に貼り付け  
   `https://dashboard.stripe.com/settings/billing/portal`
 1. ボット部分と同様の`LINE_ACCESS_TOKEN`と`SHEET_ID`を設定
 1. ボット部分と同様にデプロイし、URLをコピー
-1. stripeの開発者ダッシュボートから`webhook`を選択し、`エンドポイントを追加`をクリック
+1. stripeの開発者ダッシュボートから`webhook`を選択し、`エンドポイントを追加`をクリック  
   `https://dashboard.stripe.com/webhooks`
 1. `エンドポイントURLに`URLをペーストする
 1. `イベントを選択`をクリックし、`checkout.session.completed`と`customer.subscription.updated`を選択し、`イベントを追加`をクリック
