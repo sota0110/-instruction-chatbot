@@ -82,7 +82,7 @@
     function doPost(e) {
       const MESSAGE_THRESHOLD = 10;
 
-      const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName('message');
+      const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName('message');
       const event = JSON.parse(e.postData.contents).events[0];
       const userId = event.source.userId;
 
@@ -97,7 +97,7 @@
       const count = data.filter(item => item[1] == userId).length;
       const isMaxUsed = count >= MESSAGE_THRESHOLD;
 
-      const paymentSheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName('payment');
+      const paymentSheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName('payment');
       let paymentData = paymentSheet.getDataRange().getValues();
       const isSubscribed = paymentData.some(row => row[0] === userId && row[4] === 1);
 
@@ -159,6 +159,7 @@
 1. google apps scriptの右上にあるデプロイボタンから新しいデプロイをクリック
 1. 左上の設定アイコンからウェブアプリを選択
 1. アクセスできるユーザーを「全員」に設定し、デプロイ
+1. 「アクセスを承認」が出た場合はそれをクリックし、左下の「詳細」をクリック、「安全ではないページに移動」をクリックしてアクセスを承認する
 1. WebアプリのURLをコピーし、LINE DevelopersのWebhook URLに貼り付け
 
 ## 支払い部分の作成
